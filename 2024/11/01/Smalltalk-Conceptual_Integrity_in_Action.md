@@ -1,4 +1,4 @@
-### **Smalltalk: Conceptual Integrity in Action.**
+# **Smalltalk: Conceptual Integrity in Action.**
 
 ![The tar pits of large-system programming. C.R. Knight: Mural of La Brea Tar Pits. The Natural History Museum of Los Angeles County.](images/image5.png)C.R. Knight: Mural of the La Brea Tar Pits, featured on the cover of *The Mythical Man-Month* by Fred Brooks.
 
