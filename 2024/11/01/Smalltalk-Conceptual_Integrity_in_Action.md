@@ -222,6 +222,8 @@ By conception, Smalltalk is a tool meant to release the creativity of those who 
 >\[Smalltalk is\] an attempt to give the world a bootstrapping mechanism for something much better than Smalltalk.  
 Alan Kay at OOPSLA 1997  
 
+*Licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).*
+
 ---
 
 *Footnotes:*
