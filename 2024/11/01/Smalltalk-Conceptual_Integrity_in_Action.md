@@ -1,11 +1,13 @@
 # **Smalltalk: Conceptual Integrity in Action.**
 
-![The tar pits of large-system programming. C.R. Knight: Mural of La Brea Tar Pits. The Natural History Museum of Los Angeles County.](images/image5.png)*C.R. Knight: Mural of the La Brea Tar Pits, featured on the cover of *The Mythical Man-Month* by Fred Brooks.*
+![The tar pits of large-system programming. C.R. Knight: Mural of La Brea Tar Pits. The Natural History Museum of Los Angeles County.](images/image5.png)
+*C.R. Knight: Mural of the La Brea Tar Pits, featured on the cover of *The Mythical Man-Month* by Fred Brooks.*
 
 One of the most eye-opening and influential ideas in my journey as a programmer was the concept of ‘conceptual integrity’, introduced by Fred Brooks in *The Mythical Man-Month* in his essay *Aristocracy, Democracy, and System Design*. 
 
->It is better to have a system omit certain anomalous features and improvements, but to **reflect one set of design ideas**, than to have one that contains many good but independent and uncoordinated ideas 
-Fred Brooks
+>It is better to have a system omit certain anomalous features and improvements, but to **reflect one set of design ideas**, than to have one that contains many good but independent and uncoordinated ideas.
+>
+> *Fred Brooks*
 
 In a nutshell, conceptual integrity consists of a set of well-related, composable concepts and the relationships between them, forming a kind of conceptual algebra.
 
@@ -27,24 +29,28 @@ If we build software like we build bridges, we end up with a piece of software v
 
 Subtracting the superfluous to reveal the essence, or the soul, of a creation is a well-known process in arts.
 
->“Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.”   
-Saint-Exupéry
+>“Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.”
+>  
+>*Saint-Exupéry*
 
  Another phrase, attributed to a multi-talented artist primarily known as a sculptor, captures this idea pragmatically.
 
 >“I saw the angel in the marble and carved until I set him free.”   
-Michelangelo Buonarroti
+>
+>*Michelangelo Buonarroti*
 
 I think that we can follow a similar process for software. While the static nature of sculpture might not be a good analogy for a running program, the idea of revealing a design that’s already present in the problem domain sounds like a good guideline to me. The attitude of unveiling a design instead of trying to impose one on the problem should distance us from the root of all evils in programming.
 
->Premature optimization is the root of all evil (or at least most of it) in programming.  
-Donald Knuth
+>Premature optimization is the root of all evil (or at least most of it) in programming.
+>  
+> *Donald Knuth*
 
 To achieve that in software, we should model the problem at hand in a way that no artificial complexity is added to the solution model. Much like a sculptor carving away marble to reveal the form within, we should aim to reduce artificial complexity to a minimum during iterations in software design, refining our solution until the true essence of the problem we’re addressing is revealed.
 
 ### **The Problem of Computing Things**
 
-![A portrait picture of Alan Turing and other of Alonzo Church side by side](images/image4.png)*Alan Turing (left) and Alonzo Church (right)*
+![A portrait picture of Alan Turing and other of Alonzo Church side by side](images/image4.png)
+*Alan Turing (left) and Alonzo Church (right)*
 
 When searching for the roots of computation, we could find two seminal and isomorphic works: Alan Turing’s Turing Machine and Alonso Church’s Lambda Calculus. Discussing these in detail would require an entire article, but it is important to note that each has its own computation metaphor. 
 
@@ -53,12 +59,14 @@ Turing’s approach is more mechanical, with an abstract machine manipulating sy
 Smalltalk also has its own computation metaphor, where the message-passing concept plays a fundamental role. Biological information processing was the source of inspiration for Alan Kay<sup>[2](#footnote-2)</sup><a id="footnote-2-back"></a>, the way that cells interchange information through protein messages and influences the behavior of the receiving cell is the base model for Object Oriented Programming<sup>[3](#footnote-3)</sup><a id="footnote-3-back"></a>.
 
 >“The shift in point of view here is \[…\] if you take things like clocks they don’t scale by a factor of a hundred very well. Take think like cells they not only scale by a factor of a hundred but by factors of trillion, and the question is, how do they do it, and how might we adapt this idea for building complex systems.”<sup>[4](#footnote-4)</sup><a id="footnote-4-back"></a>  
-Alan Kay at OOPSLA 1997
+>
+>*Alan Kay at OOPSLA 1997*
 
 The core idea Kay is illustrating is that biological systems offer a model of scalability and adaptability that can be a useful analogy for thinking about how we design complex software systems.
 
->“The ARPANET, of course, became the Internet, and from the time it started running — just around 1969 or so — to this day, it has expanded by about a factor of a hundred million. \[…\] There is not one line of code in the Internet today that was in the original ARPANET. \[…\] This is a system that has expanded by a hundred million, has changed every atom and every bit, and has never had to stop. **That is the metaphor we absolutely must apply to what we think are smaller things.”**  
-Alan Kay at OOPSLA 1997
+>“The ARPANET, of course, became the Internet, and from the time it started running — just around 1969 or so — to this day, it has expanded by about a factor of a hundred million. \[…\] There is not one line of code in the Internet today that was in the original ARPANET. \[…\] This is a system that has expanded by a hundred million, has changed every atom and every bit, and has never had to stop. **That is the metaphor we absolutely must apply to what we think are smaller things.”**
+>  
+>*Alan Kay at OOPSLA 1997*
 
 Kay provides the Internet as a practical illustration of how to model systems that mirror the scalability of natural systems. His design of OOP, inspired by biological processes, shares similarities with the modular, decentralized, and dynamic nature of the internet, where objects interact through message-passing much like how nodes in a network communicate.
 
@@ -98,8 +106,9 @@ More importantly, including mathematical expressions with standard operator prec
 
 In Smalltalk, a number is just like any other object that needs to receive a message to make a computation. This beautifully reminds me of another passage of the same essay from Brooks.
 
->Simplicity and straightforwardness proceed from the conceptual integrity. Every part must reflect the same philosophies and the same balancing of desiderata. Every part must even use the same techniques in syntax and analogous notions in semantics.   
-Fred Brooks 
+>Simplicity and straightforwardness proceed from the conceptual integrity. Every part must reflect the same philosophies and the same balancing of desiderata. Every part must even use the same techniques in syntax and analogous notions in semantics.
+>
+>*Fred Brooks*
 
 Even more interesting than arithmetic is the case of control flow. In most programming languages we must use reserved words, such as if-then-else blocks or similar to control the flow of a program.
 
@@ -133,13 +142,15 @@ This beautiful implementation illustrates the essence of object-oriented program
 
 Completely aligned with Brooks’ ideas, we can find the following paragraph in the book *Smalltalk-80: The Language and Its Implementation*, also known as *The Blue Book*. 
 
->Smalltalk is based on a small number of concepts \[…\] Due to the uniformity with which the object-message orientation is carried out in the system, there are very few new programming concepts to learn in order to understand Smalltalk.  
-From Blue Book
+>Smalltalk is based on a small number of concepts \[…\] Due to the uniformity with which the object-message orientation is carried out in the system, there are very few new programming concepts to learn in order to understand Smalltalk.
+>  
+> *From Blue Book*
 
 ### **Encapsulation**
 
->“Once you have encapsulated in such a way that there is an interface between the inside and the outside it is possible to make an object act like anything, and the reason is simply this, that what you have encapsulated is a computer.”  
-Alan Kay at OOPSLA 1997
+>“Once you have encapsulated in such a way that there is an interface between the inside and the outside it is possible to make an object act like anything, and the reason is simply this, that what you have encapsulated is a computer.”
+>  
+>*Alan Kay at OOPSLA 1997*
 
 Deeply connected to the idea of message-passing computation is the concept of encapsulation. In fact, encapsulation, in some sense, enables message-passing computation to exist: encapsulation creates a boundary between the inside and outside of an object, and it is this boundary that demands an interface to make computation possible. That interface, in turn, allows the object to decide how to respond internally when it receives a message from the outside.
 
@@ -149,8 +160,9 @@ A DTO<sup>[6](#footnote-6)</sup><a id="footnote-6-back"></a> is a typical exampl
 
 Encapsulation and message-passing computation reinforcing each other in an algebraic form that preserves the system’s conceptual integrity. By conceptualizing objects as autonomous entities, much like specialized computers, we can design modular systems that exhibit uniformity from their most basic components to the most complex constructs.
 
->\[In\] Smalltalk, which is built on the model of communicating objects, \[…\] large applications are viewed in the same way as the fundamental units from which the system is built.  
-Dan Ingalls in Design Principles Behind Smalltalk
+>\[In\] Smalltalk, which is built on the model of communicating objects, \[…\] large applications are viewed in the same way as the fundamental units from which the system is built.
+>  
+>*Dan Ingalls in Design Principles Behind Smalltalk*
 
 ### **Late Binding**
 
@@ -169,46 +181,55 @@ myObject open
 When a message like *open* is sent to *myObject,* Smalltalk’s method lookup process dynamically determines which implementation of *open* to execute, depending on the class of *myObject*. Whether *myObject* is a file, a window, or a tool, each will interpret and respond to the *open* message according to its specific behavior.
 
 >Smalltalk provides a \[…\] cleaner solution: it sends the *name* of the desired operation, along with any arguments, as a *message* to the \[object\], with the understanding that the receiver knows best how to carry out the desired operation.  
-Dan Ingalls in Design Principles Behind Smalltalk
+>
+>*Dan Ingalls in Design Principles Behind Smalltalk*
 
 At OOPSLA 1997, Alan Kay uses the Japanese concept of *ma* to underscore a process-oriented perspective on objects — one that focuses on the space for dynamic interactions and responses within the message-passing model.
 
->“Ma is the stuff in-between what we call objects. It’s the stuff we don’t see, because \[in the western culture\] we’re focused on the nounness of things rather than the processness of things.”  
-Alan Kay at OOPSLA 1997
+>“Ma is the stuff in-between what we call objects. It’s the stuff we don’t see, because \[in the western culture\] we’re focused on the nounness of things rather than the processness of things.” 
+> 
+>*Alan Kay at OOPSLA 1997*
 
 *Ma* refers to an intentional *gap* or *interval* that allows space for the interpretation of meaning. Sending a message involves more than just a direct action — there’s a conceptual space where the object decides how to respond.
 
 The separation of *What* from *How* enables objects to autonomously determine their responses. Smalltalk dynamically aligns intention with execution, holding off the decision of which implementation to execute until the last moment.
 
->“One of the great principles of computer science it’s laziness or whatever you call it, late binding. Hold off decisions when you can.”  
-Donald Knuth
+>“One of the great principles of computer science it’s laziness or whatever you call it, late binding. Hold off decisions when you can.”
+>  
+> *Donald Knuth*
 
 ### **Meta-System**
 
->“The more the language can see its own structures the more liberated you can be from the tyranny of a single implementation.”  
-Alan Kay at OOPSLA 1997
+>“The more the language can see its own structures the more liberated you can be from the tyranny of a single implementation.”
+>  
+>*Alan Kay at OOPSLA 1997*
 
 One of the effects of applying the metaphor of communicating objects consistently across Smalltalk is that the language constructs themselves become part of the universe of objects available to us as Smalltalk programmers. And it is exactly this effect that was taken advantage of to create all the visual tools that are part of a typical Smalltalk distribution. 
 
-![Listing the OrderedCollection class selectors in the accessing category.](images/image3.png)*Listing the OrderedCollection class selectors in the accessing category.*
+![Listing the OrderedCollection class selectors in the accessing category.](images/image3.png)
+*Listing the OrderedCollection class selectors in the accessing category.*
 
 Debuggers, inspectors, explorers, and browsers in Smalltalk are built with the language itself, utilizing its extensive reflexivity and metaprogramming capabilities. 
 
-![Browsing the OrderedCollection class, listing its accessing methods.](images/image1.png)*Browsing the OrderedCollection class, listing its accessing methods.*
+![Browsing the OrderedCollection class, listing its accessing methods.](images/image1.png)
+*Browsing the OrderedCollection class, listing its accessing methods.*
 
 Additionally, the visual components of Smalltalk user interface are Smalltalk objects, which means we can inspect, explore, and debug those components just like any other object<sup>[8](#footnote-8)</sup><a id="footnote-8-back"></a>.
 
-![Exploring a text editor](images/image2.png)Exploring a text editor  
+![Exploring a text editor](images/image2.png)
+*Exploring a text editor*
 
->Every component accessible to the user should be able to present itself in a meaningful way for observation and manipulation.  
-Dan Ingalls in Design Principles Behind Smalltalk
+>Every component accessible to the user should be able to present itself in a meaningful way for observation and manipulation.
+>
+>*Dan Ingalls in Design Principles Behind Smalltalk*
 
 What is even more surprising is that this remarkable level of reflectivity and metaprogramming occurs in an open and live object environment. *Open* means that all the objects constituting the base system are accessible for our inspection and modification; **our code operates on the same level as the base system**. *Live* means that we can program, inspect, and modify while the objects are running, freeing us from the conventional edit-compile-run-stop loop.
 
 Smalltalk people call that the meta-system<sup>[9](#footnote-9)</sup><a id="footnote-9-back"></a>. The meta-system empowers users to understand and modify the system itself, turning users into creators. Kay envisioned meta-systems as tools to encourage users to not just work with data but to reshape their tools and frameworks as they go. In this view, the user isn’t just operating within a closed system but actively extends, refines, and redefines the system’s boundaries.
 
->“I think one of the things we liked the most about Smalltalk was not what it could do, but the fact that it was such a good vehicle for bootstrapping the next set of ideas we had about how to do systems building.”  
-Alan Kay at OOPSLA 1997
+>“I think one of the things we liked the most about Smalltalk was not what it could do, but the fact that it was such a good vehicle for bootstrapping the next set of ideas we had about how to do systems building.”
+> 
+>*Alan Kay at OOPSLA 1997*
 
 ### **Final Words**
 
@@ -220,8 +241,9 @@ Smalltalk, as designed by Alan Kay and his team<sup>[10](#footnote-10)</sup><a i
 
 By conception, Smalltalk is a tool meant to release the creativity of those who use it, a standpoint for bringing the next big set of ideas about system building. In the words of Alan Kay himself:
 
->\[Smalltalk is\] an attempt to give the world a bootstrapping mechanism for something much better than Smalltalk.  
-Alan Kay at OOPSLA 1997  
+>\[Smalltalk is\] an attempt to give the world a bootstrapping mechanism for something much better than Smalltalk.
+>  
+>*Alan Kay at OOPSLA 1997*
 
 *Licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).*
 
