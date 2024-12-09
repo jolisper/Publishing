@@ -1,6 +1,6 @@
 # **Smalltalk: Conceptual Integrity in Action.**
 
-![The tar pits of large-system programming. C.R. Knight: Mural of La Brea Tar Pits. The Natural History Museum of Los Angeles County.](images/image5.png)C.R. Knight: Mural of the La Brea Tar Pits, featured on the cover of *The Mythical Man-Month* by Fred Brooks.
+![The tar pits of large-system programming. C.R. Knight: Mural of La Brea Tar Pits. The Natural History Museum of Los Angeles County.](images/image5.png)*C.R. Knight: Mural of the La Brea Tar Pits, featured on the cover of *The Mythical Man-Month* by Fred Brooks.*
 
 One of the most eye-opening and influential ideas in my journey as a programmer was the concept of ‘conceptual integrity’, introduced by Fred Brooks in *The Mythical Man-Month* in his essay *Aristocracy, Democracy, and System Design*. 
 
@@ -44,7 +44,7 @@ To achieve that in software, we should model the problem at hand in a way that n
 
 ### **The Problem of Computing Things**
 
-![A portrait picture of Alan Turing and other of Alonzo Church side by side](images/image4.png)Alan Turing (left) and Alonzo Church (right)
+![A portrait picture of Alan Turing and other of Alonzo Church side by side](images/image4.png)*Alan Turing (left) and Alonzo Church (right)*
 
 When searching for the roots of computation, we could find two seminal and isomorphic works: Alan Turing’s Turing Machine and Alonso Church’s Lambda Calculus. Discussing these in detail would require an entire article, but it is important to note that each has its own computation metaphor. 
 
@@ -190,16 +190,17 @@ Alan Kay at OOPSLA 1997
 
 One of the effects of applying the metaphor of communicating objects consistently across Smalltalk is that the language constructs themselves become part of the universe of objects available to us as Smalltalk programmers. And it is exactly this effect that was taken advantage of to create all the visual tools that are part of a typical Smalltalk distribution. 
 
-![](images/image3.png3)Listing the OrderedCollection class selectors in the accessing category.
+![Listing the OrderedCollection class selectors in the accessing category.](images/image3.png)*Listing the OrderedCollection class selectors in the accessing category.*
 
 Debuggers, inspectors, explorers, and browsers in Smalltalk are built with the language itself, utilizing its extensive reflexivity and metaprogramming capabilities. 
 
-![](images/image1.png)Browsing the OrderedCollection class, listing its accessing methods.
+![Browsing the OrderedCollection class, listing its accessing methods.](images/image1.png)*Browsing the OrderedCollection class, listing its accessing methods.*
 
 Additionally, the visual components of Smalltalk user interface are Smalltalk objects, which means we can inspect, explore, and debug those components just like any other object<sup>[8](#footnote-8)</sup><a id="footnote-8-back"></a>.
 
-![](images/image2.png)Exploring a text editor  
-Every component accessible to the user should be able to present itself in a meaningful way for observation and manipulation.  
+![Exploring a text editor](images/image2.png)Exploring a text editor  
+
+>Every component accessible to the user should be able to present itself in a meaningful way for observation and manipulation.  
 Dan Ingalls in Design Principles Behind Smalltalk
 
 What is even more surprising is that this remarkable level of reflectivity and metaprogramming occurs in an open and live object environment. *Open* means that all the objects constituting the base system are accessible for our inspection and modification; **our code operates on the same level as the base system**. *Live* means that we can program, inspect, and modify while the objects are running, freeing us from the conventional edit-compile-run-stop loop.
