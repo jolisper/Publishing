@@ -76,7 +76,9 @@ Kay provides the Internet as a practical illustration of how to model systems th
 
 In Smalltalk, if we want that something happens we must follow the form: 
 
+```Smalltalk
 Object message
+```
 
 Even arithmetic, string concatenation, and control flow follow this pattern. This is where the expression *In Smalltalk, everything is an object* finds its deeper meaning. This idea isn’t just a declaration; it’s a practical reality. Everything is an object not because some gods on Olympus declared it, but because the only way to perform any computation is by sending a message to an object — period.
 
