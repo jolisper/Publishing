@@ -1,6 +1,7 @@
 # **Smalltalk: Conceptual Integrity in Action.**
 
 ![The tar pits of large-system programming. C.R. Knight: Mural of La Brea Tar Pits. The Natural History Museum of Los Angeles County.](images/image5.png)
+<br>
 *C.R. Knight: Mural of the La Brea Tar Pits, featured on the cover of *The Mythical Man-Month* by Fred Brooks.*
 
 One of the most eye-opening and influential ideas in my journey as a programmer was the concept of ‘conceptual integrity’, introduced by Fred Brooks in *The Mythical Man-Month* in his essay *Aristocracy, Democracy, and System Design*. 
@@ -25,7 +26,7 @@ For the things built in the physical world, in general, we expect that those thi
 
 If we build software like we build bridges, we end up with a piece of software very hard to change and doomed to be maintained until someone with the authority (but probably without the knowledge) decides to destroy it and build it again. Any resemblance with reality is purely coincidental.
 
-### **Designing by Subtraction**
+## **Designing by Subtraction**
 
 Subtracting the superfluous to reveal the essence, or the soul, of a creation is a well-known process in arts.
 
@@ -47,9 +48,10 @@ I think that we can follow a similar process for software. While the static natu
 
 To achieve that in software, we should model the problem at hand in a way that no artificial complexity is added to the solution model. Much like a sculptor carving away marble to reveal the form within, we should aim to reduce artificial complexity to a minimum during iterations in software design, refining our solution until the true essence of the problem we’re addressing is revealed.
 
-### **The Problem of Computing Things**
+## **The Problem of Computing Things**
 
 ![A portrait picture of Alan Turing and other of Alonzo Church side by side](images/image4.png)
+<br>
 *Alan Turing (left) and Alonzo Church (right)*
 
 When searching for the roots of computation, we could find two seminal and isomorphic works: Alan Turing’s Turing Machine and Alonso Church’s Lambda Calculus. Discussing these in detail would require an entire article, but it is important to note that each has its own computation metaphor. 
@@ -70,7 +72,7 @@ The core idea Kay is illustrating is that biological systems offer a model of sc
 
 Kay provides the Internet as a practical illustration of how to model systems that mirror the scalability of natural systems. His design of OOP, inspired by biological processes, shares similarities with the modular, decentralized, and dynamic nature of the internet, where objects interact through message-passing much like how nodes in a network communicate.
 
-### **Communicating Objects**
+## **Communicating Objects**
 
 In Smalltalk, if we want that something happens we must follow the form: 
 
@@ -146,7 +148,7 @@ Completely aligned with Brooks’ ideas, we can find the following paragraph in 
 >  
 > *From Blue Book*
 
-### **Encapsulation**
+## **Encapsulation**
 
 >“Once you have encapsulated in such a way that there is an interface between the inside and the outside it is possible to make an object act like anything, and the reason is simply this, that what you have encapsulated is a computer.”
 >  
@@ -164,7 +166,7 @@ Encapsulation and message-passing computation reinforcing each other in an algeb
 >  
 >*Dan Ingalls in Design Principles Behind Smalltalk*
 
-### **Late Binding**
+## **Late Binding**
 
 Every time we send a message to an object, the Smalltalk virtual machine runs an algorithm called *method lookup,* which locates the appropriate method based on the receiver object and message. A key concept here is that the message and the method are mediated by a kind of dynamic switch-case mechanism embedded in the virtual machine *for our profit*, effectively embodying the fundamental theorem of computer science that states:
 
@@ -198,7 +200,7 @@ The separation of *What* from *How* enables objects to autonomously determine th
 >  
 > *Donald Knuth*
 
-### **Meta-System**
+## **Meta-System**
 
 >“The more the language can see its own structures the more liberated you can be from the tyranny of a single implementation.”
 >  
@@ -207,16 +209,19 @@ The separation of *What* from *How* enables objects to autonomously determine th
 One of the effects of applying the metaphor of communicating objects consistently across Smalltalk is that the language constructs themselves become part of the universe of objects available to us as Smalltalk programmers. And it is exactly this effect that was taken advantage of to create all the visual tools that are part of a typical Smalltalk distribution. 
 
 ![Listing the OrderedCollection class selectors in the accessing category.](images/image3.png)
+<br>
 *Listing the OrderedCollection class selectors in the accessing category.*
 
 Debuggers, inspectors, explorers, and browsers in Smalltalk are built with the language itself, utilizing its extensive reflexivity and metaprogramming capabilities. 
 
 ![Browsing the OrderedCollection class, listing its accessing methods.](images/image1.png)
+<br>
 *Browsing the OrderedCollection class, listing its accessing methods.*
 
 Additionally, the visual components of Smalltalk user interface are Smalltalk objects, which means we can inspect, explore, and debug those components just like any other object<sup>[8](#footnote-8)</sup><a id="footnote-8-back"></a>.
 
 ![Exploring a text editor](images/image2.png)
+<br>
 *Exploring a text editor*
 
 >Every component accessible to the user should be able to present itself in a meaningful way for observation and manipulation.
@@ -231,7 +236,7 @@ Smalltalk people call that the meta-system<sup>[9](#footnote-9)</sup><a id="foot
 > 
 >*Alan Kay at OOPSLA 1997*
 
-### **Final Words**
+## **Final Words**
 
 Smalltalk is to me one great example of what we can achieve in system building if we actively follow the concept of conceptual integrity. 
 
