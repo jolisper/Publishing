@@ -60,7 +60,7 @@ Turing’s approach is more mechanical, with an abstract machine manipulating sy
 
 Smalltalk also has its own computation metaphor, where the message-passing concept plays a fundamental role. Biological information processing was the source of inspiration for Alan Kay<sup>[2](#footnote-2)</sup><a id="footnote-2-back"></a>, the way that cells interchange information through protein messages and influences the behavior of the receiving cell is the base model for Object Oriented Programming<sup>[3](#footnote-3)</sup><a id="footnote-3-back"></a>.
 
->“The shift in point of view here is \[…\] if you take things like clocks they don’t scale by a factor of a hundred very well. Take think like cells they not only scale by a factor of a hundred but by factors of trillion, and the question is, how do they do it, and how might we adapt this idea for building complex systems.”<sup>[4](#footnote-4)</sup><a id="footnote-4-back"></a>  
+>“The shift in point of view here is \[…\] if you take things like clocks they don’t scale by a factor of a hundred very well. Take things like cells they not only scale by a factor of a hundred but by factors of trillion, and the question is, how do they do it, and how might we adapt this idea for building complex systems.”<sup>[4](#footnote-4)</sup><a id="footnote-4-back"></a>  
 >
 >*Alan Kay at OOPSLA 1997*
 
