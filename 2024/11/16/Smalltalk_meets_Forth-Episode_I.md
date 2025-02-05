@@ -488,7 +488,8 @@ ForthInterpreter>>doesNotUnderstand: aMessage
 
 Since the interpreter object is the receiver of the Forth words, we want the REPL to display the message ‘Undefined word’ for non-implemented words, rather than triggering the typical Smalltalk behavior of popping up a debugger.
 
-<img src="assets/Forth-Undefined-Word.png" title="" alt="Forth Undefined Word" data-align="center">For all other errors not subclassed from ForthError, we wanted Smalltalk’s normal behavior.
+<img src="assets/Forth-Undefined-Word.png" title="" alt="Forth Undefined Word" data-align="center"><br>
+For all other errors not subclassed from ForthError, we wanted Smalltalk’s normal behavior.
 
 ## The Editor
 
