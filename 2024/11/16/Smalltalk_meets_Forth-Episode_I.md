@@ -180,7 +180,7 @@ With the REPL ready we can start to implement Forth features.
 
 A REPL is the usual way to interact with Forth, giving quick feedback as you type. But in Smalltalk, the go-to tool for playing with code is the Workspace. It’s like a live text editor where you can write, run, and tweak code snippets on the spot. We’ll explore that possibility for our Forth interpreter later.
 
-<img src="assets/Smalltalk-Workspace-Demo.gif" title="" alt="Smalltalk Workspace Demo.gif" data-align="center">
+<img src="assets/Smalltalk-Workspace-Demo.gif" title="Smalltalk Workspace Demo" alt="Smalltalk Workspace Demo" data-align="center">
 
 ## The Stack
 
@@ -232,11 +232,11 @@ The dataStack internal collaborator is self-explanatory: it holds an instance of
 
 The interpreter is responsible for implementing all Forth words. To organize them, I’ve used the standard group names as message categories. The naming conventions follow the standard as the main reference.
 
-<img src="assets/Forth-Standard-Group-Words.png" title="" alt="Forth - Standard Group Words.png" data-align="center">
+<img src="assets/Forth-Standard-Group-Words.png" title="Forth - Standard Group Words" alt="Forth - Standard Group Words" data-align="center">
 
 Forth standard categories into messages categories: 
 
-<img src="assets/Forth-Interpreter-Message-categories.png" title="" alt="Forth Interpreter - Message categories.png" data-align="center">
+<img src="assets/Forth-Interpreter-Message-categories.png" title="Forth Interpreter - Message categories" alt="Forth Interpreter - Message categories" data-align="center">
 
 The main message of the interpreter is execute:
 
@@ -271,7 +271,7 @@ ForthInterpreter>>tokenize: aString
 
 This method takes a string, splits it into words using substrings, and turns each word into a ForthToken. The ForthToken class is the base class for all tokens, and it knows how to create the right type of token from each word.
 
-<img src="assets/Forth-Token-hierarchy.png" title="" alt="ForthToken hierarchy.png" data-align="center">
+<img src="assets/Forth-Token-hierarchy.png" title="ForthToken hierarchy" alt="ForthToken hierarchy" data-align="center">
 
 To do this, it goes through its subclasses until it finds one that matches the string. Each subclass knows how to check if it matches a given string.
 
@@ -414,7 +414,7 @@ The method checks division for zero after pop the two arguments. Why is that? be
 
 One neat effect of Smalltalk’s features is that our Forth math implementation supports fractions out of the box.
 
-<img src="assets/Forth-Smalltalk-Fraction-Support.gif" title="" alt="Forth Smalltalk Fraction Support" data-align="center">
+<img src="assets/Forth-Smalltalk-Fraction-Support.gif" title="Forth Smalltalk Fraction Support" alt="Forth Smalltalk Fraction Support" data-align="center">
 
 With basic arithmetic working, let’s add some programming tools.
 
@@ -431,13 +431,13 @@ ForthInterpreter>>dot
 
 This word pops the top element from the stack and prints it.
 
-<img src="assets/Forth-Dot-Word.png" title="" alt="Forth Dot Word" data-align="center">
+<img src="assets/Forth-Dot-Word.png" title="Forth Dot Word" alt="Forth Dot Word" data-align="center">
 
 Printing the top element of the data stack with the dot word.
 
 The dot word is considered part of the core words in the standard. It is commonly used at the end of a one-liner to check results.
 
-<img src="assets/Forth-Dot-Word-One-liner.gif" title="" alt="Forth Dot Word One-liner" data-align="center">
+<img src="assets/Forth-Dot-Word-One-liner.gif" title="Forth Dot Word One-liner" alt="Forth Dot Word One-liner" data-align="center">
 
 Another useful tool is the dot S word, which copies and displays the values currently on the data stack.
 
@@ -448,7 +448,7 @@ ForthInterpreter>>dotS
 
 Here, we simply rely on the printString message of the data stack, as discussed in the stack section earlier.
 
-<img src="assets/Forth-Dot-S-Word.png" title="" alt="Forth Dot S Word" data-align="center">
+<img src="assets/Forth-Dot-S-Word.png" title="Forth Dot S Word" alt="Forth Dot S Word" data-align="center">
 
 In the tokenization process, the DotWordToken is responsible for mapping the string word to its symbol representation
 
@@ -475,7 +475,7 @@ ForthIntepreter>>execute: textWords
             do: [ :error | self display: error description ]].
 ```
 
-<img src="assets/Forth-Error-Hierarchy.png" title="" alt="Forth Error Hierarchy" data-align="center">
+<img src="assets/Forth-Error-Hierarchy.png" title="Forth Error Hierarchy" alt="Forth Error Hierarchy" data-align="center">
 
 The only atypical thing is we specialize the doesNotUndestand: message of the interpreter. The doesNotUndestand: message is sent by the virtual machine to the receiver object when the method lookup fails to find a method for the sent message. It is the virtual machine giving the receiver object the chance to decide how to respond to an unexpected message.
 
@@ -488,7 +488,7 @@ ForthInterpreter>>doesNotUnderstand: aMessage
 
 Since the interpreter object is the receiver of the Forth words, we want the REPL to display the message ‘Undefined word’ for non-implemented words, rather than triggering the typical Smalltalk behavior of popping up a debugger.
 
-<img src="assets/Forth-Undefined-Word.png" title="" alt="Forth Undefined Word" data-align="center"><br>
+<img src="assets/Forth-Undefined-Word.png" title="Forth Undefined Word" alt="Forth Undefined Word" data-align="center"><br>
 For all other errors not subclassed from ForthError, we wanted Smalltalk’s normal behavior.
 
 ## The Editor
