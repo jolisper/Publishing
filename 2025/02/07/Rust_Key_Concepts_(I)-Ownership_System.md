@@ -745,6 +745,8 @@ This strict compile-time checking is a key contributor to Rust's learning curve.
 
 Starting with a simple 'use of moved value' scenario, we explored various ownership-related concepts and techniques. We also examined ways to relax or even defy the static rules with dynamic replacements. I'm confident that we've now built a practical understanding of how the ownership system works, which is essential for tackling more complex scenarios. Stay tuned!
 
+*Licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).*
+
 [^1]: There are two exceptions to this: the use of unsafe code to bypass the mutability restrictions and the use of shareable mutable containers Cell, RefCell, and OnceCell, which allows us to mutate the data inside an immutable container.
 
 [^2]: Internally, *Rc<T>* uses *PhantomData<T>*, a zero-cost abstraction, to represent ownership without storing an actual instance of T. Including *PhantomData<T>* allows the compiler to track ownership and enforce type relationships at compile time without spend more memory. 
