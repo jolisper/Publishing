@@ -5,7 +5,7 @@
 * [Smalltalk meets Forth: Episode I](2024/11/16/Smalltalk_meets_Forth-Episode_I.md)
 
 ## 2025
-* [Rust Key Concepts (I)](2025/02/07/Rust_Key_Concepts_(I)-Ownership_System.md)
+* [Rust Key Concepts (I): Ownership System](2025/02/07/Rust_Key_Concepts_(I)-Ownership_System.md)
 
 ## License
 
