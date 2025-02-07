@@ -81,7 +81,7 @@ fn main() {
 }
 ```
 
-The *message* variable is assigned in the main function's scope and passed as an argument to another function that prints the message. This code compiles successfully, which means that all the ownership rules are upheld in this program.
+The *message* variable is assigned in the main function's scope and passed as an argument to another function that prints the message. This code compiles successfully, meaning all ownership rules are upheld.
 
 The program not only compiles but also runs without any issues.
 
@@ -196,7 +196,7 @@ fn main() {
 }
 ```
 
-Maybe this isn’t the first option in practice, but it illustrates how a function can take and return ownership of a value. It’s important to note that this process does not require any additional allocation.
+While this might not be the first option in practice, it demonstrates how a function can take and return ownership of a value. It’s important to note that this process does not require any additional allocation.
 
 In terms of ownership, we are adding an extra moving step to solve the issue: the returned ownership in the *print_message* function. Interestingly, the value itself isn’t what matters here. For example, we can return a completely different *String* value from the function, and the code still compiles:
 
@@ -343,7 +343,7 @@ fn main() {
 }
 ```
 
-When you clone an *Rc\<T>*, another pointer to the same allocation is created[^2], and the reference count is incremented. When an *Rc\<T>* goes out of scope, its drop logic decrements the reference count. If the count reaches zero, the value is deallocated.
+When you clone an *Rc\<T>*, another pointer to the same allocation is created, and the reference count is incremented[^2]. When an *Rc\<T>* goes out of scope, its drop logic decrements the reference count. If the count reaches zero, the value is deallocated.
 
 This means that *Rc<T>* does not create a copy of the value *T*; it merely increments or decrements the reference count. As a result, this approach introduces some overhead because *Rc<T>* needs to keep track of how many owners the value *T* has. In situations where we want or need to share the same instance of an object across different parts of a program, the *Rc<T>* smart pointer comes in handy.
 
@@ -635,7 +635,7 @@ struct Point {
 
 Because our struct uses only copy values, we can derive the Copy trait for Point. Copy values in Rust refer to values of types that implement the Copy trait. This trait allows for the duplication of values without transferring ownership. The Copy trait is automatically implemented for simple, fixed-size types, like integers, floating-point, booleans, and character types.
 
-The use of the Copy trait in our custom types implies design decisions similar to those made with the *clone()* method use. The key difference lies in their purposes: `Copy` is a marker trait that signals to the compiler that a type's value can be duplicated by simply copying its bits in memory. In contrast, the `Clone` trait defines an explicit method for creating a copy of a value. For types implementing `Copy`, values are automatically duplicated instead of being moved when passed to a function or assigned to another variable. In this sense, the `Copy` trait represents a controlled exception to Rust's default move semantics in the ownership system.
+Using the `Copy` trait for custom types involves design decisions similar to those made with the *clone()* method use. The key difference lies in their purposes: `Copy` is a marker trait that signals to the compiler that a type's value can be duplicated by simply copying its bits in memory. In contrast, the `Clone` trait defines an explicit method for creating a copy of a value. For types implementing `Copy`, values are automatically duplicated instead of being moved when passed to a function or assigned to another variable. In this sense, the `Copy` trait represents a controlled exception to Rust's default move semantics in the ownership system.
 
 ### Interior Mutability
 
@@ -699,7 +699,7 @@ Based on simple examples we learnt the rules of the ownership system, and we wen
 * We can give access to values without renounce to ownership via borrowing using references.
 * And we can refactor the code to remove the ownership transfer rethinking the function call order or manually inlining code.
 
-Witch option we should pick? Well, like many interesting answers in life begins with the word: depends. There is no magic rule to follow any time, because the selected option would depends on the problem you have into hands. 
+Witch option we should pick? Well, like many interesting answers in life, it begins with the word: depends. There is no magic rule to follow any time, because the selected option would depends on the problem you have into hands. 
 
 As general guidance immutable and mutable references are usually the most flexible option, because allow access to a value without transferring ownership, avoiding the need for cloning or moving data. One typical exception are the constructors where taking ownership of the values is usually the best option if we want to keep the ownership flows simple and understandable.
 
@@ -743,7 +743,7 @@ This strict compile-time checking is a key contributor to Rust's learning curve.
 
 ## Final Words
 
-From a simple "use of moved value" scenario, we explored several concepts and techniques related to the ownership system. We also examined ways to relax or even defy the static rules with dynamic replacements. I'm confident that we've now built a practical understanding of how the ownership system works, which is essential for tackling more complex scenarios. Stay tuned!
+Starting with a simple 'use of moved value' scenario, we explored various ownership-related concepts and techniques. We also examined ways to relax or even defy the static rules with dynamic replacements. I'm confident that we've now built a practical understanding of how the ownership system works, which is essential for tackling more complex scenarios. Stay tuned!
 
 [^1]: There are two exceptions to this: the use of unsafe code to bypass the mutability restrictions and the use of shareable mutable containers Cell, RefCell, and OnceCell, which allows us to mutate the data inside an immutable container.
 
