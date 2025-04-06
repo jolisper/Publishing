@@ -1,8 +1,8 @@
-# Gradle Composite Builds
+# Modular Java Builds with Gradle: From Setup to Strategy
 
 In this hands-on guide we'll see how we can configure composite builds in a simple way using the Gradle command line utils as much as possible — plus a bit of how I used them to break up a monolith on the way to microservices.
 
-### Why Use Composite Builds?
+## Why Use Composite Builds?
 
 Composite builds are a powerful Gradle feature that address the challenges of modular development, particularly in projects that need to evolve independently but still integrate reliably. They offer several practical advantages:
 
@@ -344,7 +344,7 @@ The integration layer, in particular, had become a bottleneck. It was monolithic
 
 We knew we needed to evolve toward a more modular architecture, but a full rewrite wasn’t realistic. Instead, we chose a path of **incremental decomposition**. The goal was to isolate provider-specific logic that could be developed and tested independently, without breaking the existing deployment model.
 
-To enable this, we adopted **Gradle composite builds**. Rather than splitting the integration layer into separate microservices immediately — which would have required significant coordination, deployment, and CI complexity — we began extracting provider connectors into standalone Gradle builds. These builds could be version-controlled separately, tested in isolation, and evolved at their own pace.
+To enable this, we adopted Gradle composite builds. Rather than splitting the integration layer into separate microservices immediately — which would have required significant coordination, deployment, and CI complexity — we began extracting provider connectors into standalone Gradle builds. These builds could be version-controlled separately, tested in isolation, and evolved at their own pace.
 
 Using `includeBuild(...)`, we wired them back into the main system as source dependencies. This gave us the benefits of modularity without forcing early service boundaries or dependency publication. Because Gradle treated them as if they were published artifacts, nothing had to change in the rest of the system.
 
@@ -377,5 +377,3 @@ Beyond simple modularization, composite builds can also serve as a practical bri
 [Introducing Composite Builds](https://blog.gradle.org/introducing-composite-builds?utm_source=chatgpt.com)
 
 [Composite Builds](https://docs.gradle.org/current/userguide/composite_builds.html)
-
-
