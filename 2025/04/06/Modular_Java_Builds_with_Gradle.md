@@ -1,5 +1,7 @@
 # Modular Java Builds with Gradle: From Setup to Strategy
 
+<img src="assets/Modular_Building.png" title="" alt="Modular Building.png" data-align="center">
+
 In this hands-on guide we'll see how we can configure composite builds in a simple way using the Gradle command line utils as much as possible — plus a bit of how I used them to break up a monolith on the way to microservices.
 
 ## Why Use Composite Builds?
